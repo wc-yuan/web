@@ -1,0 +1,58 @@
+<html>
+<title>
+</title>
+
+<body>
+<canvas id="myCanvas" width="405" height="405" style="border:5px solid #66ccff;">
+您的浏览器不支持 HTML5 canvas 标签。
+</canvas>
+<script>
+var a=5;
+var b=5;
+var cor;
+var ifi;
+
+for (var i=0;i<16;i++){
+for (var ii=0;ii<16;ii++){ 
+if (i>=ii){
+ifi=i;
+} else {
+ifi=ii;
+}
+switch (ifi%7)
+{
+case 0:cor="#FF0000";
+break;
+case 1:cor="#FF7F00";
+break;
+case 2:cor="#FFFF00";
+break;
+case 3:cor="#00FF00";
+break;
+case 4:cor="#00FFFF";
+break;
+case 5:cor="#0000FF";
+break;
+case 6:cor="#8B00FF";
+break;
+}
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.fillStyle=cor;
+ctx.fillRect(a,b,20,20);
+a+=25;
+}
+a=5;
+b+=25;
+}
+</script> 
+<p style="background-color:#FF0000">红:#FF0000</p>
+<p style="background-color:#FF7F00">橙:#FF7F00</p>
+<p style="background-color:#FFFF00">黄:#FFFF00</p>
+<p style="background-color:#00FF00">绿:#00FF00</p>
+<p style="background-color:#00FFFF">青:#00FFFF</p>
+<p style="color:white;background-color:#0000FF">蓝:#0000FF</p>
+<p style="color:white;background-color:#8B00FF">紫:#8B00FF</p>
+</body>
+
+</html>
